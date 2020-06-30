@@ -1,2 +1,2 @@
 # sparkDL
-Hands-On Deep Learning with Spark
+Hands-On Deep Learning with Spark -- Book
