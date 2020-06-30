@@ -24,7 +24,7 @@ object DataVecSpark {
         val inputDataSchema = new Schema.Builder()
             .addColumnString("DateTimeString")
             .addColumnsString("CustormerID", "MerchantID")
-            .addColumnInteger("NumItenmsInTransaction")
+            .addColumnInteger("NumItemsInTransaction")
             .addColumnCategorical("MerchantCountryCode", List("USA", "CAN", "FR", "MX").asJava)
             .addColumnDouble("TransactionAmountUSD", 0.0, null, false, false)
             .addColumnCategorical("FraudLabel", List("Fraud", "Legit").asJava)
