@@ -1,0 +1,24 @@
+version: '3.7'
+services:
+  zookeeper:
+   image: zookeeper
+   ports:
+      - "2181:2181"
+   environment:
+      ZOO_MY_ID: 1
+      ZOO_SERVERS: server.1=0.0.0.0:2888:3888;2181
+   networks:
+     kafka-net:
+       ipv4_address: 172.10.0.2
+  zkui:
+    image: qnib/zkui
+    ports:
+      - "9090:9090"
+
+
+networks:
+  kafka-net:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.10.0.0/24
