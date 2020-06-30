@@ -6,3 +6,4 @@ null
 .metals
 data
 project/project
+.classpath
