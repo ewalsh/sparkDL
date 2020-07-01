@@ -35,5 +35,5 @@ USER hduser
 EXPOSE 9092 2181 2888 3888
 
 WORKDIR /opt/kafka_2.12-2.5.0
-RUN  bin/zookeeper-server-start.sh config/zookeeper.properties
+
 CMD ["bin/kafka-server-start.sh","config/server.properties"]

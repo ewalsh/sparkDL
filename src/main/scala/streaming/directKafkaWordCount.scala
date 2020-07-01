@@ -32,7 +32,7 @@ object DirectKafkaWordCount {
     val topicsSet = topics.split(",")
     val kafkaParams = Map[String, Object](
       "metadata.broker.list" -> brokers,
-      "bootstrap.servers" -> "localhost:9092",
+      "bootstrap.servers" -> brokers,
       "key.deserializer" -> classOf[StringDeserializer],
       "value.deserializer" -> classOf[StringDeserializer],
       "group.id" -> "only",
